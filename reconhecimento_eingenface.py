@@ -20,7 +20,7 @@ while (True):
         cv2.rectangle(imagem, (x, y), (x+l, y+a), (0,0,255), 2)
         id, confianca = reconhecedor.predict(imagemFace)
         cv2.putText(imagem, str(id), (x,y+(a+30)), font, 2, (0, 0, 255))
-
+        cv2.putText(imagem, str(confianca), (x,y+(a+50)), font, 2 (0,255,0))
 
     cv2.imshow('Face', imagem)
     if cv2.waitKey(1) == ord('q'):
